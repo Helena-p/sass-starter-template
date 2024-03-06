@@ -1,0 +1,12 @@
+@use 'sass:meta';
+@use 'sass:math';
+@use 'sass:map';
+@use 'colors' as *;
+
+@function clr($color, $args...) {
+    @if map.has-key($colors, $color) {
+        @return map.get($colors, $color, $args...)
+    } @else {
+        @error 'Color (#{$color}) does not exist as a color key/value in map.';
+    }
+}

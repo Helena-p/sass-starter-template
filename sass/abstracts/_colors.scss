@@ -1,0 +1,17 @@
+@use 'sass:map';
+
+$colors: (
+    primary: (
+        'light': #edf6f9,
+        'normal': #83c5be,
+        'dark': #006d77
+    ),
+    accent: (
+        'light': #f2542d,
+        'dark': #562c2c,
+    ),
+    neutral: (
+        '100': #fff,
+        '900': #000,
+    ),
+)
