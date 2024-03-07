@@ -1,12 +1,26 @@
-@use 'sass:meta';
-@use 'sass:math';
 @use 'sass:map';
 @use 'colors' as *;
 
-@function clr($color, $args...) {
-    @if map.has-key($colors, $color) {
-        @return map.get($colors, $color, $args...)
+@function clr($color, $shade) {
+    @if map.has-key($colors, $color, $shade) {
+      @return map.get($colors, $color, $shade);
     } @else {
-        @error 'Color (#{$color}) does not exist as a color key/value in map.';
+      @error 'Color (#{$color}) does not exist as a color key/value in map.';
     }
-}
+  }
+  
+  @function fs($font-size) {
+    @if map.has-key($font-sizes, $font-size) {
+      @return map.get($font-sizes, $font-size);
+    } @else {
+      @error 'Font-size (#{$font-size}) does not exist as a size key/value in map.';
+    }
+  }
+  
+  @function size($size) {
+    @if map.has-key($sizes, $size) {
+      @return map.get($sizes, $size);
+    } @else {
+      @error 'Size (#{$size}) does not exist as a size key/value in map.';
+    }
+  }

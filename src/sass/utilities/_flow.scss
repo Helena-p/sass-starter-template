@@ -1,0 +1,7 @@
+/* 
+    Adds margin-top to all direct children ( > * + * )
+    Intended for block/flow elements that are always stacked 
+ */
+ .flow > *:where(:not(:first-child)) {
+    margin-block-start: var(--flow-spacer, 1rem);
+}
