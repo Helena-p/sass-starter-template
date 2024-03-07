@@ -1,4 +1,4 @@
-# Starter template using Dart Sass & Vite build tool
+# Starter template using Dart Sass
 
 Built using Vite as build tool with Vite PurgeCss plug-in to reduce copiled CSS file size and unused selectors.<br>
 This starter template is intended for static MPAs (Multi Page Application), however, to tailor for a SPA (Single Page Application) modify <code>vite.config.js</code> file to your need.<br>
